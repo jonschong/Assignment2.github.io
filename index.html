@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="./styles.css">
+    <title>Home</title>
+</head>
+<body>
+  <div style="display:flex; width: 100%; justify-content: center;background-image: url('RP_TheTrip.jpg');background-size: 100% 100%;">
+	<div style="width: 100%;padding:32px;background-color: #00000055;">
+	<h1 style="color:whitesmoke
+	; text-align:center; font-size: 60px">Virgin Active</h1>
+	<p style="text-align:center;font-size: 40px;color:whitesmoke"> 
+		<b>Raffles place</b> 
+	</p>	 
+	</div>
+</div>
+
+<!-- Button Container -->
+<div style="display:flex;width: 100%; justify-content: center;background-color: #333;">
+<div class="topnav">
+  <a class="home" href="index.html">Home</a>
+  <a href="membership and packages.html">Membership and packages</a>
+  <a href="facilities.html">Facilities</a>
+  <a href="programs.html">Programs</a>
+</div>
+</div>
+<!-- End Button Container -->
+
+<!--start description-->
+
+  <h2 
+	style="text-align:center; 
+		   font-size: 30px; 
+		   color:rgb(26, 95, 88);
+		   "> 
+	Raffles Place
+  </h2>
+<p style="text-align:center;font-size: 30px">
+  High-end fitness experience in the heart of the financial district.
+  Discover a spacious fitness playground spanning across more than
+  35,000 sq ft of space, conveniently located on Level 6 of One Raffles Place,
+  just one minute away from the Raffles Place MRT station.
+  The closest parking can be found at the basement of One Raffles Place.
+</p>
+
+<!--end description-->
+
+<!-- gallery Start -->
+<meta name="viewport" content="width=80%", initial-scale=1">
+
+<h2 style="text-align:center;font-size: 30px;color:rgb(26, 95, 88)">Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://staging.virginactive.com.sg/images/library/Facilities/NMP_Group_Ex_Studio.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://staging.virginactive.com.sg/images/library/Facilities/RP_SaltRoom.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://staging.virginactive.com.sg/images/library/Facilities/RelaxRecoveryZone.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://staging.virginactive.com.sg/images/library/Facilities/Changerooms.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://staging.virginactive.com.sg/images/library/ClubHero/RafflesPlace_Hero.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://classpass-res.cloudinary.com/image/upload/f_auto/q_auto/ob7u836wiydkn019yzzy.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://staging.virginactive.com.sg/images/library/Facilities/NMP_Group_Ex_Studio.jpg" style="width:100%" onclick="currentSlide(1)" alt="Martial Arts Studio">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://staging.virginactive.com.sg/images/library/Facilities/RP_SaltRoom.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sleep Pods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://staging.virginactive.com.sg/images/library/Facilities/RelaxRecoveryZone.jpg" style="width:100%" onclick="currentSlide(3)" alt="Steam Rooms">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://staging.virginactive.com.sg/images/library/Facilities/Changerooms.jpg" style="width:100%" onclick="currentSlide(4)" alt="Changing Rooms">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://staging.virginactive.com.sg/images/library/ClubHero/RafflesPlace_Hero.jpg" style="width:100%" onclick="currentSlide(5)" alt="Boxing">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://classpass-res.cloudinary.com/image/upload/f_auto/q_auto/ob7u836wiydkn019yzzy.jpg" style="width:100%" onclick="currentSlide(6)" alt="HITT Room">
+    </div>
+  </div>
+</div>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+<!-- gallery End -->
+
+
+<!--video start-->
+<h2 style="text-align:center;font-size: 30px;color:rgb(26, 95, 88)">Tour</h2>
+<div id="ctl00_phBody_ctl00_CarouselOrVimeoVideo_pnlVimeoVideo">
+	
+  <div id="inlineVideo_607223945" data-vimeo-id="607223945" data-vimeo-playsinline="true" data-vimeo-background="false" data-vimeo-transparent="true" data-vimeo-responsive="1"></div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+      var videoPlayer_607223945 = new Vimeo.Player('inlineVideo_607223945');    
+  </script>
+
+</div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div ng-app="appBookATour" ng-controller="LandingController as vm">
+
+<!--video end-->
+
+<!--club details-->
+<div style="display:flex; width: 100%; justify-content: center;margin-top: 20px; ">
+  <div style="width:80%;background-color: whitesmoke;">
+   <h1 style="text-align: center;">Club Details</h1>
+   <p style="text-align: center;">
+    VIRGIN ACTIVE RAFFLES PLACE<br>
+    LEVEL 6<br>
+    TOWER 2<br>
+    ONE RAFFLES PLACE<br>
+    SINGAPORE 048616
+   </p>
+   <div style="display:flex;justify-content: space-around;">
+     <p style="text-align: center;"><b>Monday</b><br>6:30am-10:30pm</p>
+     <p style="text-align: center;"><b>Tuesday</b><br>6:30am-10:30pm</p>
+     <p style="text-align: center;"><b>Wednesday</b><br>6:30am-10:30pm</p>
+     <p style="text-align: center;"><b>Thursday</b><br>6:30am-10:30pm</p>
+     <p style="text-align: center;"><b>Friday</b><br>6:30am-10:30pm</p>
+     <p style="text-align: center;"><b>Saturday</b><br>8:00am-5:00pm</p>
+     <p style="text-align: center;"><b>Sunday</b><br>Closed</p>
+   </div>
+  </div>
+
+</div>
+
+<!--end club details-->  
+
+
+
+</body>
+</html>
